@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "holdout-controls"
+version = "0.0.1"
+description = "Run scripted controls against an RL environment's grader and find tasks that reward runs that didn't do the work."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Holdout", email = "hello@holdout.cc" }]
+keywords = ["reinforcement-learning", "reward-hacking", "evaluation", "grader", "testing"]
+dependencies = []
+
+[project.scripts]
+holdout-controls = "holdout_controls.cli:main"
+
+[project.urls]
+Homepage = "https://holdout.cc"
+Source = "https://github.com/holdout-cc/holdout-controls"
+
+[tool.setuptools]
+packages = ["holdout_controls"]
